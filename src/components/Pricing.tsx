@@ -7,7 +7,8 @@ import { cn } from "@/lib/utils";
 const plans = [
   {
     name: "Starter",
-    price: 5,
+    price: "490",
+    currency: "BDT",
     description: "Perfect for personal projects and small sites.",
     specs: [
       "1 Core CPU",
@@ -23,7 +24,8 @@ const plans = [
   },
   {
     name: "Pro",
-    price: 12,
+    price: "1,050",
+    currency: "BDT",
     description: "Ideal for growing businesses and traffic-heavy apps.",
     specs: [
       "2 Core CPU",
@@ -40,7 +42,8 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: 25,
+    price: "2,490",
+    currency: "BDT",
     description: "Maximum power for mission-critical workloads.",
     specs: [
       "4 Core CPU",
@@ -145,11 +148,14 @@ export default function Pricing() {
                 </p>
 
                 {/* Price */}
-                <div className="mt-6 flex items-baseline gap-1">
-                  <span className="text-5xl font-bold text-white">
-                    ${plan.price}
+                <div className="mt-6 flex items-baseline gap-1.5">
+                  <span className="text-sm font-semibold text-zinc-400">
+                    {plan.currency}
                   </span>
-                  <span className="text-zinc-500">/mo</span>
+                  <span className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                    {plan.price}
+                  </span>
+                  <span className="text-sm text-zinc-500">/mo</span>
                 </div>
 
                 {/* Specs */}
